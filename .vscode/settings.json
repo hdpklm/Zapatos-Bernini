@@ -1,0 +1,6 @@
+{
+	"python.pythonPath": "C:\\Python38\\python.exe",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"debug.console.wordWrap": false,
+}

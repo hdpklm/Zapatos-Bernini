@@ -1,0 +1,15 @@
+{% extends "tienda/master.html" %}
+{% block content %}
+<h2>Producto: {{ producto.nombre }}</h2>
+<div class="content-grid">
+	<article class="media content-section">
+		<img class="rounded-circle article-img" width="600" src="{{ producto.imagen.url }}">
+		<div class="ml-2 media-body">
+			<p class="article-content">Tamaño: {{ producto.tamanio }}</p>
+			<p class="article-content">Precio: {{ producto.precio }} Euros</p>
+			<button class="btn btn-info">Añadir a la cesta</button>
+			<p class="article-content">Descripcion: {{ producto.desc }}</p>
+		</div>
+	</article>
+</div>
+{% endblock content %}

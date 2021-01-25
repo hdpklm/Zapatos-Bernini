@@ -1,0 +1,9 @@
+{% extends "tienda/master.html" %}
+{% block content %}
+<h2>Has cerrado la sesión</h2>
+<div class="border-top pt-3">
+	<small class="text-muted">
+		<a href="{% url 'login' %}">Iniciar sesión</a>
+	</small>
+</div>
+{% endblock content %}

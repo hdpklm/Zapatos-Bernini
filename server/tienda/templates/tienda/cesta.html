@@ -1,0 +1,16 @@
+{% extends "tienda/master.html" %}
+{% block content %}
+<h2>Cesta</h2>
+<div class="content-grid">
+	{% for producto in productos %}
+	<article class="media content-section">
+		<img class="rounded-circle article-img" width="150" src="{{ producto.imagen.url }}">
+		<div class="ml-2 media-body">
+			<h2><a class="article-title" href="{% url 'producto' producto.id %}">{{ producto.nombre }}</a></h2>
+			<p class="article-content">Tamaño: {{ producto.tamanio }}<br>Precio: {{ producto.precio }} Euros</p>
+			<button class="btn btn-info">Borrar</button>
+		</div>
+	</article>
+	{% endfor %}
+</div>
+{% endblock content %}

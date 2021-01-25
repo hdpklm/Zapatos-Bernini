@@ -1,0 +1,21 @@
+{% extends "tienda/master.html" %}
+{% block content %}
+<h2>Detalles de tu pedido</h2>
+<h4>Precio Total: {{ pedido.total }} Euros</h4>
+<h4>Fetcha: {{ pedido.date|date:"F d, Y" }}</h4>
+<div class="content-grid">
+	{% for producto in pedido.pedidoproducto_set.all %}
+	<a href="{% url 'pedido_detalle' pedido.id %}"></a>
+	<article class="media content-section">
+		<img class="rounded-circle article-img" width="300" src="{{ producto.producto.imagen.url }}">
+		<div class="ml-2 media-body">
+			<p class="article-content">Nombre: {{ producto.producto.nombre }}</p>
+			<p class="article-content">Cantidad: {{ producto.cantidad }}</p>
+			<p class="article-content">Precio: {{ producto.precio }} Euros</p>
+			<p class="article-content">Total: {{ producto.total }} Euros</p>
+		</div>
+	</article>
+	</a>
+	{% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,184 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar {
+  background-color: #427bff;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+#root>.content-grid {
+  margin-top: 100px;
+}
+
+#root>.content {
+  margin-top: 100px;
+}
+
+.content-section {
+  width: 360px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 13px;
+  margin-bottom: 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-flex>.content-section {
+  width: 100%;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  /* height: 65px; */
+  /* width: 65px; */
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.button-holder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button-holder>* {
+  margin: 0;
+  margin-left: 15px;
+}
+
+.message-holder {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.alert {
+  transition: 0.3s;
+}
+
+.alert.removing {
+  opacity: 0;
+}
+
+.producto-holder {
+  background-color: #eee;
+}
+
+.producto-holder .producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.producto-holder .producto span {
+  text-align: right;
+}
+
+.producto-holder .producto span:first-of-type {
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description{
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  background-color: #eee7;
+}
