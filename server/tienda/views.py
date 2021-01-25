@@ -17,6 +17,7 @@ from .models import Producto, ProductoSerializer
 from .models import PedidoProducto, PedidoProductoSerializer
 from .models import productoSerializer, productosSerializer
 from .sendmail import sender
+from django.conf import settings
 
 
 # OK
@@ -181,8 +182,14 @@ def register_old(request):
 
 
 def send_email(pedido, productos):
-    mail = sender("inibir.test.123@gmail.com", "cuentatest123")
-    mail.attach_content("Productos.csv", productos)
-    mail.send("hdaoud10@gmail.com",
-              f"{pedido}",
-              f"{pedido}")
+    try:
+        sender_email = settings.SENDER_EMAIL
+        sender_pass = settings.SENDER_PASS
+        reciver_email = settings.RECIVER_EMAIL
+        subject_email = settings.SUBJECT_EMAIL
+
+        mail = sender(sender_email, sender_pass)
+        mail.attach_content("Productos.csv", productos)
+        mail.send(reciver_email, subject_email, f"{pedido}")
+    except Exception as e:
+        print("ERROR : "+str(e))

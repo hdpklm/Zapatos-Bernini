@@ -143,3 +143,10 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
+
+
+# Email Configuration
+SENDER_EMAIL = "inibir.test.123@gmail.com"
+SENDER_PASS = "cuenta.test.123"
+RECIVER_EMAIL = "hdaoud10@gmail.com"
+SUBJECT_EMAIL = "Pedido De Cliente"
